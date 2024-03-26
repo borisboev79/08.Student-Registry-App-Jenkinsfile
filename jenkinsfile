@@ -21,6 +21,7 @@ pipeline {
             steps {
                 bat 'docker pull boboev/studentapp'
                 bat 'docker-compose up -d'
+                bat 'curl "https://api.render.com/deploy/srv-cntjt4uct0pc739rjot0?key=GKUyDYWLVbM"'
 
             }
         }

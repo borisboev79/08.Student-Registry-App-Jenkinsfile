@@ -7,14 +7,14 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Test') {
+        stage('NPM Audit') {
             steps {
-                echo 'Testing..'
+                bat 'npm audit'
             }
         }
-        stage('Deploy') {
+        stage('Run Integration Tests') {
             steps {
-                echo 'Deploying....'
+                bat 'npm run test'
             }
         }
     }

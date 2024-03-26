@@ -17,5 +17,12 @@ pipeline {
                 bat 'npm run test'
             }
         }
+         stage('Deploy to production') {
+            steps {
+                bat 'docker pull boboev/studentapp'
+                bat 'docker-compose up -d'
+
+            }
+        }
     }
 }
